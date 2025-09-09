@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // 1. Create an array to store the results.
+        var resultArray = new double[length];
+
+        // 2. Loop through the array.
+        for (int i = 0; i < length; i++)
+        {
+            // 3. Calculate and assign each multiple.
+            resultArray[i] = number * (i + 1);
+        }
+
+        // 4. Return the completed array.
+        return resultArray;
+
     }
 
     /// <summary>
@@ -29,5 +41,17 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        // 1. Determine the split point.
+        int splitIndex = data.Count - amount;
+
+        // 2. Copy the end part of the list.
+        List<int> sectionToMove = data.GetRange(splitIndex, amount);
+
+        // 3. Remove that part from the original list.
+        data.RemoveRange(splitIndex, amount);
+
+        // 4. Insert the copied part at the beginning.
+        data.InsertRange(0, sectionToMove);
     }
 }
