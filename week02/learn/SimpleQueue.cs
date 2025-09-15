@@ -46,7 +46,6 @@
         }
         // Defect(s) Found: none
     }
-
     private readonly List<int> _queue = new();
 
     /// <summary>

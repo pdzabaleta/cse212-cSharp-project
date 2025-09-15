@@ -11,3 +11,5 @@
         return result;
     }
 }
+
+// This function reverses the texts
