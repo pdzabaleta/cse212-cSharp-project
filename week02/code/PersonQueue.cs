@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 /// <summary>
 /// A basic implementation of a Queue
 /// </summary>
@@ -8,14 +10,17 @@ public class PersonQueue
     public int Length => _queue.Count;
 
     /// <summary>
-    /// Add a person to the queue
+    /// Add a person to the end of the queue.
     /// </summary>
     /// <param name="person">The person to add</param>
     public void Enqueue(Person person)
     {
-        _queue.Insert(0, person);
+        _queue.Add(person);
     }
 
+    /// <summary>
+    /// Remove a person from the front of the queue.
+    /// </summary>
     public Person Dequeue()
     {
         var person = _queue[0];
@@ -23,6 +28,9 @@ public class PersonQueue
         return person;
     }
 
+    /// <summary>
+    /// Check if the queue is empty.
+    /// </summary>
     public bool IsEmpty()
     {
         return Length == 0;
